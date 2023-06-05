@@ -255,6 +255,11 @@ def indexJquery():
     return app.send_static_file('jquery-3.7.0.js')
 
 
+@app.route('/login')
+def login():
+    return app.send_static_file('index.html')
+
+
 @app.route('/api/log/dg', methods=['POST'])
 def apiLogDG():
     if request.form.get('pwd') != pwd:
