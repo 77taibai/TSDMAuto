@@ -1,10 +1,10 @@
-FROM centos:latest
+FROM ubuntu:18.04
 
 WORKDIR /ap
 
-RUN yum update && yum install curl -y
+RUN apt update && apt install wget -y
 
-    && curl -O https://github.com/77taibai/tsdm/releases/download/v0.1/app.tar \
+    && wget https://github.com/77taibai/tsdm/releases/download/v0.1/app.tar \
 
     && tar -xf ./app.tar \
 
