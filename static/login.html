@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <script>
+        window.onload= function (){
+            document.getElementById('p').innerText = localStorage.getItem('pwd') || '没有登陆'
+        }
+    </script>
+</head>
+<body>
+<p id="p">加载中...</p>
+<input type="text" id="pwd">
+<button onclick="localStorage.setItem('pwd', document.getElementById('pwd').value);document.getElementById('p').innerText = localStorage.getItem('pwd') || '没有登陆'">提交</button>
+</body>
+</html>

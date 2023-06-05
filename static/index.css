@@ -1,0 +1,227 @@
+body{
+    margin: 0;
+}
+
+#mainS{
+    /*display: none;*/
+}
+
+#mainCAA{
+    display: none;
+}
+#mainC{
+    display: none;
+}
+
+#topH{
+    margin: 0;
+    position: absolute;
+    left: 20px;
+    top: 13px;
+    font-size: 20px;
+}
+
+#topTool{
+    padding-left: 5px;
+    position: absolute;
+    left: 85px;
+    background-color: #acf3f3;
+    right: 15px;
+    height: 50px;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+
+#topToolStatus{
+    display: inline-block;
+    height: 100%;
+    padding-right: 50px;
+    padding-left: 50px;
+    text-align: center;
+    line-height: 47px;
+    font-size: 22px;
+}
+
+#topToolAccount{
+    display: inline-block;
+    height: 100%;
+    padding-right: 50px;
+    padding-left: 50px;
+    text-align: center;
+    line-height: 47px;
+    font-size: 22px;
+}
+
+#topToolAccount:hover, #topToolStatus:hover{
+    background-color: rgba(181,181,181,0.31);
+    border-radius: 10px;
+    user-select: none;
+}
+
+#main{
+    position: absolute;
+    top: 60px;
+    left: 15px;
+    right: 15px;
+    bottom: 20px;
+    border-radius: 10px;
+    background-color: #efefef;
+}
+
+#mainStatusTop{
+    position: absolute;
+    text-align: center;
+    left: 0;
+    right: 0;
+}
+
+#mainStatusLog{
+    position: absolute;
+    left: 8px;
+    right: 8px;
+    top: 105px;
+    user-select: none;
+}
+
+#mainStatusLogDG{
+    border-radius: 10px;
+    background-color: #4efff2;
+    padding: 5px 10px;
+    width: 100%;
+}
+
+#mainStatusLogDGO{
+    position: absolute;
+    right: 15px;
+    padding: 5px 10px;
+    top: 10px;
+}
+
+#mainStatusLogDGO:hover{
+    user-select: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+#mainStatusLogDG > thead{
+    height: 40px;
+}
+
+#mainStatusLogDGT{
+    position: absolute;
+    left: 15px;
+    top: 14px;
+}
+
+#mainStatusLogDGB > tr > td:first-child{
+    width: 165px;
+}
+
+td{
+    word-break: break-all;
+    text-align: left;
+}
+
+
+#mainStatusLogQD{
+    border-radius: 10px;
+    background-color: #4efff2;
+    padding: 5px 10px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+#mainStatusLogQDO{
+    padding: 5px 14px 5px 10px;
+    text-align: right;
+    background-color: transparent;
+}
+
+#mainStatusLogQDO:hover{
+    user-select: none;
+    cursor: pointer;
+}
+
+#mainStatusLogQD > thead{
+    height: 40px;
+}
+
+#mainStatusLogQDT{
+}
+
+#mainStatusLogQDB > tr > td:first-child{
+    width: 165px;
+}
+
+::-webkit-scrollbar {
+
+  display: none; /* Chrome Safari */
+
+}
+
+#mainStatusLogQDB,#mainStatusLogDGB{
+    display: none;
+}
+
+#mainStatusH{
+    position: absolute;
+    text-align: center;
+    left: 0;
+    right: 0;
+    margin-top: 60px;
+}
+
+#mainCA{
+    text-align: center;
+    user-select: none;
+    cursor: pointer;
+}
+
+#mainCTable > tbody > tr > td:last-child{
+    cursor: pointer;
+    user-select: none;
+}
+
+#mainCAA{
+    background-color: white;
+    width: 480px;
+    height: 180px;
+    border-radius: 10px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 80px;
+    margin: auto;
+}
+
+#mainCAAX{
+    margin-top: 10px;
+    margin-left: 10px;
+    user-select: none;
+    cursor: pointer;
+}
+
+#mainCAA > label{
+    margin-left: 80px;
+}
+
+#mainCAAU{
+    padding-top: 10px;
+    padding-left: 42px;
+    background-color: #acf3f3;
+    width: 80px;
+    height: 37px;
+    border-radius: 5px;
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 10px;
+    margin: auto;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>天使</title>
+    <script src="jquery-3.7.0.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+</head>
+<body>
+<div id="top">
+    <h3 id="topH">天 使</h3>
+    <div id="topTool">
+        <div id="topToolStatus" onclick="openS()">状 态</div>
+        <div id="topToolAccount" onclick="openC()">账 户</div>
+    </div>
+</div>
+
+<div id="main">
+    <div id="mainS">
+        <div id="mainStatus">
+        <h2 id="mainStatusTop">检测运行状态......</h2>
+        <h4 id="mainStatusH">天使币：</h4>
+    </div>
+        <div id="mainStatusLog">
+        <table id="mainStatusLogDG">
+            <thead>
+            <tr>
+                <td id="mainStatusLogDGT">打工 日志</td>
+                <td id="mainStatusLogDGO" onclick="loaddg()">👇</td>
+            </tr>
+            </thead>
+            <tbody id="mainStatusLogDGB"></tbody>
+        </table>
+
+        <table id="mainStatusLogQD">
+            <thead>
+            <tr>
+                <td id="mainStatusLogQDT">签到 日志</td>
+                <td id="mainStatusLogQDO" onclick="loadqd()">👇</td>
+            </tr>
+            </thead>
+            <tbody id="mainStatusLogQDB"></tbody>
+        </table>
+    </div>
+    </div>
+    <div id="mainC">
+        <h3 id="mainCA" onclick="$('#mainCAA').show()">➕</h3>
+        <div id="mainCAA">
+            <div id="mainCAAX" onclick="closeCAA()">❌</div>
+            <label>
+                账户ID
+                <input type="text" id="mcaaid">
+            </label>
+            <br>
+            <label>
+                账户名
+                <input type="text" id="mcaaname">
+            </label>
+            <br>
+            <label>
+                Cookie
+                <input type="text" id="mcaacookie">
+            </label>
+            <div id="mainCAAU" onclick="mainCAAU()">
+                提交
+            </div>
+        </div>
+        <table id="mainCTable"></table>
+    </div>
+</div>
+
+
+</body>
+</html>
