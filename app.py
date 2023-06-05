@@ -380,4 +380,4 @@ if __name__ == '__main__':
 
     pwd = 'L$5V$9eszfv$AX4*&(shajvmtZ&qJQVMT^LNq1lmzwlA%p1CVia3IYO%BV(vCrop'
 
-    app.run()
+    app.run(port=os.getenv("PORT", default=5000), host='0.0.0.0')
