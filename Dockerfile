@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-WORKDIR /app
+WORKDIR /ap
 
 RUN apk update \
 
@@ -20,4 +20,4 @@ RUN apk update \
 
 EXPOSE 5000
 
-ENTRYPOINT ["app"]
+ENTRYPOINT ["./app"]
