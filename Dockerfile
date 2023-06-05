@@ -16,7 +16,9 @@ RUN apk update \
 
     && tar -xf ./app.tar \
 
-    && chmod +x ./app
+    && chmod u+x ./app \
+    
+    && ls
 
 EXPOSE 5000
 
