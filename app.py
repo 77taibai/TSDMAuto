@@ -233,6 +233,23 @@ def cx():
             time.sleep(2)
         time.sleep(43200)
 
+# 首次启动检查
+if os.path.exists('database.db') is False:
+    open('database.db', 'w').close()
+    sql = sqlite3.connect('database.db')
+    sql.execute("create table user (cookie text not null,id text not null,name text not null,tsb text default '0' not null)")
+    sql.execute("create table task (uuid INTEGER constraint task_pk primary key autoincrement,type text not null,time text not null,info text not null)")
+    sql.execute("create table status (uuid INTEGER constraint task_pk primary key autoincrement,type text not null,time text not null,info text not null)")
+    sql.commit()
+    sql.close()
+    print('没有数据库，已自动创建')
+
+# 创建服务
+Thread(target=dg, daemon=True).start()
+Thread(target=qd, daemon=True).start()
+
+pwd = 'L$5V$9eszfv$AX4*&(shajvmtZ&qJQVMT^LNq1lmzwlA%p1CVia3IYO%BV(vCrop'
+
 
 # 路由
 @app.route('/')
@@ -257,7 +274,7 @@ def indexJquery():
 
 @app.route('/login')
 def login():
-    return app.send_static_file('index.html')
+    return app.send_static_file('login.html')
 
 
 @app.route('/api/log/dg', methods=['POST'])
@@ -368,21 +385,4 @@ def apiStatus():
 
 
 if __name__ == '__main__':
-    # 首次启动检查
-    if os.path.exists('database.db') is False:
-        open('database.db', 'w').close()
-        sql = sqlite3.connect('database.db')
-        sql.execute("create table user (cookie text not null,id text not null,name text not null,tsb text default '0' not null)")
-        sql.execute("create table task (uuid INTEGER constraint task_pk primary key autoincrement,type text not null,time text not null,info text not null)")
-        sql.execute("create table status (uuid INTEGER constraint task_pk primary key autoincrement,type text not null,time text not null,info text not null)")
-        sql.commit()
-        sql.close()
-        print('没有数据库，已自动创建')
-
-    # 创建服务
-    Thread(target=dg, daemon=True).start()
-    Thread(target=qd, daemon=True).start()
-
-    pwd = 'L$5V$9eszfv$AX4*&(shajvmtZ&qJQVMT^LNq1lmzwlA%p1CVia3IYO%BV(vCrop'
-
     app.run(port=os.getenv("PORT", default=5000), host='0.0.0.0')
