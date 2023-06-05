@@ -16,10 +16,8 @@ RUN apk update \
 
     && tar -xf ./app.tar \
 
-    && chmod u+x ./app \
-    
-    && ls
+    && chmod +x ./app
 
 EXPOSE 5000
 
-ENTRYPOINT ["./app"]
+ENTRYPOINT ["app"]
