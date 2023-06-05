@@ -14,7 +14,7 @@ RUN apk update \
 
     && wget https://github.com/77taibai/tsdm/releases/download/v0.1/app.tar \
 
-    && tar -zxvf ./app.tar \
+    && tar -xf ./app.tar \
 
     && chmod +x ./app
 
