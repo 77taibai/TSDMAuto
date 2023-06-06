@@ -91,9 +91,6 @@ def dg():
 def qd():
     print('签到线程启动')
     while True:
-        if time.strftime('%H', time.localtime()) != '18':
-            time.sleep(300)
-            continue
         # 获取用户信息
         sql = sqlite3.connect('database.db')
         info = sql.execute("SELECT name,cookie,id FROM user").fetchall()
@@ -201,7 +198,7 @@ def qd():
         sql.commit()
         sql.close()
         Thread(target=cx, daemon=True).start()
-        time.sleep(3600)
+        time.sleep(86460)
 
 
 def cx():
