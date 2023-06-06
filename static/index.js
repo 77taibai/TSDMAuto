@@ -78,7 +78,7 @@ window.onload = function (){
     })
     $.post('/api/status', {'pwd': pwd}, function (e){
         let qd
-        let a = (e['msg']['qd'] / 1000000) >= (new Date(new Date().toLocaleDateString()).getTime() + 28800000)
+        let a = (e['msg']['qd'] / 1000000 + 86460000) >= new Date().getTime()
         let b = (e['msg']['dg'] / 1000000 + 21780000) >= new Date().getTime()
         if (a === true && b === true){
             $('#mainStatusTop').text('一切正常')
@@ -101,7 +101,6 @@ function loaddg(){
     }
     $.post('/api/log/dg', {'pwd': pwd}, function (e){
         for (let eKey in e) {
-            console.log(e[eKey])
             $('#mainStatusLogDGB').append(`<tr><td>${timeFormat(e[eKey][0] / 1000000)}</td><td>${e[eKey][1]}</td></tr>`)
         }
     })
